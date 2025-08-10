@@ -1,0 +1,18 @@
+@font-face {
+    font-family: comic-shanns;
+    src: url("./fonts/ComicShannsMonoNerdFont-Regular.otf");
+}
+
+* {
+    font-family: comic-shanns;
+}
+
+body {
+    background-color: #36383F;
+    color: #EAEDF0;
+}
+
+#title {
+    text-align: center;
+    line-height: 85vh;
+}
