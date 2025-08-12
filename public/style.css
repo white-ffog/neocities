@@ -1,34 +1,24 @@
-@font-face {
-    font-family: comic-shanns;
-    src: url("./fonts/ComicShannsMonoNerdFont-Regular.otf");
-}
-
-* {
-    font-family: comic-shanns;
-}
-
-body {
-    background-color: #36383F;
-    color: #EAEDF0;
+li {
+  color: red;
 }
 
 #title {
-    text-align: center;
-    line-height: 85vh;
-    scale: 70%;
-    animation-name: title-move;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
+  text-align: center;
+  line-height: 85vh;
+  scale: 70%;
+  animation-name: title-move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
 @keyframes title-move {
-    from {
-        color: #36383F;
-        transform: scale(100%);
-    }
-    to {
-        color: #EAEDF0;
-        transform: scale(140%);
-    }
+  from {
+    color: #36383f;
+    transform: scale(100%);
+  }
+  to {
+    color: #eaedf0;
+    transform: scale(140%);
+  }
 }
