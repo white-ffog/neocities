@@ -1,86 +1,84 @@
 @font-face {
-  font-family: comic-shanns;
-  src: url("/fonts/ComicShannsMonoNerdFont-Regular.otf");
+  font-family: open-dyslexic;
+  src: url("/fonts/OpenDyslexic-Regular.woff2") format("woff2"),
+    url("/fonts/OpenDyslexic-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: monofur;
-  src: url("/fonts/MonofurNerdFontMono-Regular.ttf");
+  font-family: open-dyslexic;
+  src: url("/fonts/OpenDyslexic-Bold.woff2") format("woff2"),
+    url("/fonts/OpenDyslexic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: symbols;
-  src: url("/fonts/SymbolsNerdFont-Regular.ttf");
+  font-family: open-dyslexic;
+  src: url("/fonts/OpenDyslexic-Italic.woff2") format("woff2"),
+    url("/fonts/OpenDyslexic-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
 }
 
-* {
-  font-family: comic-shanns;
+@font-face {
+  font-family: open-dyslexic;
+  src: url("/fonts/OpenDyslexic-Bold-Italic.woff2") format("woff2"),
+    url("/fonts/OpenDyslexic-Bold-Italic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
 }
 
-hr {
-  color: rgb(215, 215, 215);
+input, textarea, button, option, select {
+  background-color: #abb2bf;
+  color: #282c34;
+}
+
+a {
+  color: #678dd9
+}
+
+a:visited {
+  color: #3f5f9f
+}
+
+mark {
+  background-color: #abb2bf;
+  color: #282c34;
 }
 
 body {
-  background-image: url("/images/sky.png");
-  background-repeat: repeat;
-  color: #eaedf0;
+  background-color: F0F0F0;
+  background-color: #282c34;
+  color: #abb2bf;
+  font-size: 1.5em;
   margin: 0;
+  font-family: open-dyslexic;
 }
 
-p {
-  text-align: justify;
-}
-
-#top-menu {
-  width: 100%;
-  height: 97px;
-}
-
-#main-content {
-  margin: 20px 200px;
-  padding: 20px 40px;
-  font-size: 1.4em;
-  color: rgb(255, 255, 255);
-
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-@media (width > 390px) and (width <= 770px) {
-  #top-menu {
-    height: 162px;
+@media only screen and (min-width: 1000px){
+  body {
+    margin: 0 200px;
   }
 }
 
-@media (width <= 390px) {
-  #top-menu {
-    height: 290px;
-  }
+.center-text {
+  text-align: center;
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.red {
+  color: #dc3545;
 }
 
-.prevent-select {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+.green {
+  color: #27a444;
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.yellow {
+ color: #ffc107;
+}
+
+.blue {
+  color: #007bff;
 }
