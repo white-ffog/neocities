@@ -1,46 +1,41 @@
-@font-face {
-  font-family: open-dyslexic;
-  src: url("/fonts/OpenDyslexic-Regular.woff2") format("woff2"),
-    url("/fonts/OpenDyslexic-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+#logo {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-@font-face {
-  font-family: open-dyslexic;
-  src: url("/fonts/OpenDyslexic-Bold.woff2") format("woff2"),
-    url("/fonts/OpenDyslexic-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
+#nav-menu {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-@font-face {
-  font-family: open-dyslexic;
-  src: url("/fonts/OpenDyslexic-Italic.woff2") format("woff2"),
-    url("/fonts/OpenDyslexic-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
+#trademark {
+    margin-top: 30px;
 }
 
-@font-face {
-  font-family: open-dyslexic;
-  src: url("/fonts/OpenDyslexic-Bold-Italic.woff2") format("woff2"),
-    url("/fonts/OpenDyslexic-Bold-Italic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-}
-
-input, textarea, button, option, select {
+input,
+textarea,
+button,
+option,
+select {
   background-color: #abb2bf;
   color: #282c34;
 }
 
 a {
-  color: #678dd9
+  text-decoration: none;
+  color: #678dd9;
+  margin: 0 10px;
+  display: inline-block;
+  transition: scale 0.3s;
+}
+
+a:hover {
+  scale: 110%;
 }
 
 a:visited {
-  color: #3f5f9f
+  color: #3f5f9f;
 }
 
 mark {
@@ -54,10 +49,11 @@ body {
   color: #abb2bf;
   font-size: 1.5em;
   margin: 0;
-  font-family: open-dyslexic;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1000px) {
   body {
     margin: 0 200px;
   }
@@ -76,9 +72,20 @@ body {
 }
 
 .yellow {
- color: #ffc107;
+  color: #ffc107;
 }
 
 .blue {
   color: #007bff;
+}
+
+.no-select {
+  user-select: none;
+  /* Standard */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
 }
