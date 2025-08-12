@@ -1,0 +1,48 @@
+@font-face {
+    font-family: comic-shanns;
+    src: url("/fonts/ComicShannsMonoNerdFont-Regular.otf");
+}
+
+@font-face {
+    font-family: monofur;
+    src: url("/fonts/MonofurNerdFontMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: symbols;
+    src: url("/fonts/SymbolsNerdFont-Regular.ttf");
+}
+
+* {
+    font-family: comic-shanns;
+}
+
+body {
+    background-image: url("/images/sky-fog.png");
+    background-repeat: repeat;
+    color: #EAEDF0;
+    margin: 0;
+}
+
+
+#top-menu {
+    width: 100%;
+    height: 163px;
+}
+
+@media (width >= 1000px) {
+    body {
+        margin: 0px 200px;
+    }
+
+    #top-menu {
+        width: 88%;
+        height: 97px;
+    }
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
