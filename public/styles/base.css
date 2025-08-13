@@ -18,8 +18,18 @@ textarea,
 button,
 option,
 select {
-  background-color: #abb2bf;
-  color: #282c34;
+  background-color: #343a40;
+  color: #abb2bf;
+  border-radius: 5px;
+  border: 2px solid #abb2bf;
+  transition: scale 0.2s, opacity 0.2s;
+  padding: 5px;
+  margin: 5px;
+}
+
+button:hover {
+  opacity: 0.9;
+  scale: 105%;
 }
 
 a {
@@ -82,11 +92,7 @@ body {
 
 .no-select {
   user-select: none;
-  /* Standard */
   -webkit-user-select: none;
-  /* Safari */
   -moz-user-select: none;
-  /* Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
 }
