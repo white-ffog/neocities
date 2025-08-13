@@ -32,16 +32,16 @@ button:hover {
   scale: 105%;
 }
 
-/* a {
+a {
   text-decoration: none;
   color: #678dd9;
   margin: 0 10px;
   display: inline-block;
-  transition: scale 0.3s;
+  transition: transform 0.3s;
 }
 
 a:hover {
-  scale: 110%;
+  transform: scale(110%);
 }
 
 a:visited {
