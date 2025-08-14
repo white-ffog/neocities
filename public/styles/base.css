@@ -36,7 +36,6 @@ button:hover {
 a {
   text-decoration: none;
   color: #678dd9;
-  margin: 0 10px;
   display: inline-block;
   transition: transform 0.3s;
 }
@@ -48,7 +47,8 @@ a:hover {
 a:visited {
   color: #3f5f9f;
 }
-*/ mark {
+
+mark {
   background-color: #abb2bf;
   color: #282c34;
 }
@@ -63,31 +63,6 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
-div.image-frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px;
-}
-
-div.image-frame figure {
-  margin: 0;
-}
-
-div.image-frame img {
-  img {
-    width: 100%;
-    display: block;
-    margin: 30px auto;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  body {
-    margin: 0 200px;
-    font-size: 1.5em;
-  }
-}
 
 .center-text {
   text-align: center;
@@ -114,4 +89,44 @@ div.image-frame img {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    margin: 0 200px;
+    font-size: 1.5em;
+  }
+
+}
+
+.w50 {
+  width: 50%;
+}
+
+.w75 {
+  width: 75%;
+}
+
+figure {
+  margin: 10px auto;
+}
+
+figure img {
+  width: 100%;
+}
+
+figure div {
+  width: 100%;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 1000px) {
+  .w50 {
+    width: 95%;
+  }
+  
+  .w75 {
+    width: 95%;
+  }
 }
