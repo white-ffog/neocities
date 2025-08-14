@@ -2,12 +2,11 @@ const header_html = `
 <h1 id="logo"> WhiteFog 🌁</h1>
 
 <nav id="nav-menu">
-<a href="/">Início</a><span class="no-select"> | </span>
-<a href="/dummy.html">Dummy</a><span class="no-select"> | </span>
-<a href="/">Entradas</a><span class="no-select"> | </span>
-<a href="/">Galeria</a><span class="no-select"> | </span>
-<a href="/">Sobre</a>
-</nav>
+<a href="/">🏡Início</a><span class="no-select"> | </span>
+<a href="/dummy.html">🕳️Dummy</a><span class="no-select"> | </span>
+<a href="/">🔍Entradas</a><span class="no-select"> | </span>
+<a href="/">🖼️Galeria</a><span class="no-select"> | </span>
+<a href="/about">🤔Sobre</a>
 <hr />
 `
 
