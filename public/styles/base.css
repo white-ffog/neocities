@@ -14,6 +14,10 @@
   margin: 30px 0;
 }
 
+#regard {
+  font-size: 0.7em;
+}
+
 input,
 textarea,
 button,
@@ -94,9 +98,13 @@ body {
 @media only screen and (min-width: 1000px) {
   body {
     margin: 0 200px;
-    font-size: 1.5em;
+    font-size: 1.9em;
   }
 
+}
+
+.w25 {
+  width: 25%;
 }
 
 .w50 {
@@ -115,13 +123,17 @@ figure img {
   width: 100%;
 }
 
-figure div {
+figure figcaption {
   width: 100%;
   font-size: 0.9em;
   font-style: italic;
 }
 
 @media only screen and (max-width: 1000px) {
+  .w25 {
+    width: 95%;
+  }
+
   .w50 {
     width: 95%;
   }

@@ -12,6 +12,9 @@ const header_html = `
 
 const footer_html = `
 <hr />
+<div><em id="regard">"Esse site é feito por um humano. Logo, como todo
+humano, ele vai errar. Sempre confirme as informações
+em outras fontes"</em></div>
 <div id="trademark"> © WhiteFog, 2025 <div/>
 `
 
