@@ -126,7 +126,9 @@ figure img {
 figure figcaption {
   width: 100%;
   font-size: 0.9em;
-  font-style: italic;
+  /* font-style: italic; */
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
