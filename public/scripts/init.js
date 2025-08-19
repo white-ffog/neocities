@@ -4,8 +4,8 @@ const header_html = `
 <nav id="nav-menu">
 <a href="/">🏡Início</a><span class="no-select"> | </span>
 <a href="/dummy.html">🕳️Dummy</a><span class="no-select"> | </span>
-<a href="/">🔍Entradas</a><span class="no-select"> | </span>
-<a href="/">🖼️Galeria</a><span class="no-select"> | </span>
+<a href="/entries.html">🔍Entradas</a><span class="no-select"> | </span>
+<a href="/gallery.html">🖼️Galeria</a><span class="no-select"> | </span>
 <a href="/about.html">🤔Sobre</a>
 <hr />
 `
