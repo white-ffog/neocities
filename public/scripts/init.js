@@ -3,9 +3,8 @@ const header_html = `
 
 <nav id="nav-menu">
 <a href="/">🏡Início</a><span class="no-select"> | </span>
-<a href="/dummy.html">🕳️Dummy</a><span class="no-select"> | </span>
 <a href="/entries.html">🔍Entradas</a><span class="no-select"> | </span>
-<a href="/gallery.html">🖼️Galeria</a><span class="no-select"> | </span>
+<a href="/wiki.html">📖Wiki</a><span class="no-select"> | </span>
 <a href="/about.html">🤔Sobre</a>
 <hr />
 `
@@ -15,7 +14,7 @@ const footer_html = `
 <div><em id="regard">"Esse site é feito por um humano. Logo, como todo
 humano, ele vai errar. Sempre confirme as informações
 em outras fontes"</em></div>
-<div id="trademark"> © WhiteFog, 2025 <div/>
+<div id="trademark"> © WhiteFog, 2025 | Contato: dopauarthur@gmail.com<div/>
 `
 
 window.addEventListener("load", () => {
