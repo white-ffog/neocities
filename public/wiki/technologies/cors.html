@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhiteFog 🌁</title>
+<link rel="stylesheet" href="/styles/normalize.css">
+<link rel="stylesheet" href="/styles/base.css">
+<script src="/scripts/init.js"></script>
+</head>
+
+<body>
+
+<h1><em>CORS (Cross-Origin Resource Sharing)</em></h1>
+
+<p>
+Como o nome já diz, isso é um política para compartilhamento de recursos
+entre diferentes origens. Por padrão os navegadores só permitem você fazer
+requisições XMLHttpRequest ou FetchAPI para origens iguais. Então, por
+exemplo, se você tiver no domínio "www.whitefog.com" e tentar fazer uma
+requisição para "www.blackfog.com", sendo que "balckfog" não permite explicitamente
+requisições feitas pelo domíno do whitefog, o seu navegador vai dar um erro de
+<em>CORS</em>.
+</p>
+<p>
+Agora, como blackfog define o que é permitido ou não, e como whitefog descobre
+isso? A resposta é, whitefog faz uma "pre-requisição" a blackfog utilizando o
+método <em>HTTP OPTIONS</em>. Essa requisição pode ser aprovada ou reprovada
+por blackfog. Se ela for aprovada o conteúdo vem normal, caso contrário você vai
+receber o erro de <em>CORS</em>.
+</p>
+<p>
+É importante ressaltar que isso só e implementado por navegadores. Então, se você
+utilizar algo como <em>Postman</em> um curl da vida, nunca que vai acontecer um erro
+de <em>CORS</em>.
+</p>
+<p>
+Você pode se perguntar, PARA QUE SERVE ESSA PORRA? Como muitas coisas ne
+internet, isso traz mais segurança as navegadores. Serve para que um domínio
+diga se você pode ou não pegar dados dele, evitando que um site que você acesse
+faça requisição para um site de outra origem, sem que esse site da outra origem
+permita isso.
+</p>
+<p>
+É importante você imaginar que sem o CORS, qualquer site podeira fazer
+requisições em nome do seu navegador. Só acessando um site, esse poderia fazer
+uma requisição para um site, por exemplo um site bancário utilizando a
+identidade do seu navegador por exemplo.
+</p>
+
+<h2>Referências</h2>
+
+<ul>
+    <li>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Guides/CORS">developer.mozilla.org</a>
+    </li>
+</ul>
+
+</body>
+</html>

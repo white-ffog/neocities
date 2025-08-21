@@ -67,6 +67,46 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
+figure {
+  margin: 10px auto;
+}
+
+figure img {
+  width: 100%;
+}
+
+figure figcaption {
+  width: 100%;
+  font-size: 0.9em;
+  /* font-style: italic; */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+li {
+  margin: 15px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .w25 {
+    width: 95%;
+  }
+
+  .w50 {
+    width: 95%;
+  }
+
+  .w75 {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    margin: 0 200px;
+    font-size: 1.9em;
+  }
+}
 
 .center-text {
   text-align: center;
@@ -95,14 +135,6 @@ body {
   -ms-user-select: none;
 }
 
-@media only screen and (min-width: 1000px) {
-  body {
-    margin: 0 200px;
-    font-size: 1.9em;
-  }
-
-}
-
 .w25 {
   width: 25%;
 }
@@ -115,32 +147,10 @@ body {
   width: 75%;
 }
 
-figure {
-  margin: 10px auto;
+.small {
+  font-size: 0.6em;
 }
 
-figure img {
-  width: 100%;
-}
-
-figure figcaption {
-  width: 100%;
-  font-size: 0.9em;
-  /* font-style: italic; */
-  margin-bottom: 10px;
+.center-text {
   text-align: center;
-}
-
-@media only screen and (max-width: 1000px) {
-  .w25 {
-    width: 95%;
-  }
-
-  .w50 {
-    width: 95%;
-  }
-  
-  .w75 {
-    width: 95%;
-  }
 }

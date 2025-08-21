@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhiteFog 🌁</title>
+<link rel="stylesheet" href="/styles/normalize.css">
+<link rel="stylesheet" href="/styles/base.css">
+<script src="/scripts/init.js"></script>
+</head>
+
+<body>
+
+<h1><em>PgBouncer</em></h1>
+
+<ul>
+    <li>
+        <a href="https://www.pgbouncer.org/">Site Oficial do <em>PgBouncer</em></a>
+    </li>
+</ul>
+
+<p>
+O postgres cria um novo processo para cada cliente conectado. Assim, se 100 clientes
+se conectam ao banco de dados, então 100 processos vão ser abertos para cada conexão,
+isso é lento, ineficiente e não escala (famosa frase no mundo da tecnologia).
+</p>
+<p>
+O <em>PgBouncer</em> atua como um <em>middleware</em> entre os clientes e o banco.
+Os cliente se conectam ao PgBouncer da mesma maneira que se conectariam ao banco.
+Assim, o PgBouncer cuida de todas as requisições de maneira eficiente.
+</p>
+<p>
+Em resumo, o PgBouncer diminui a sobrecarga de abrir várias conexões com um 
+banco de dados Postgres.
+</p>
+
+</body>
+</html>
