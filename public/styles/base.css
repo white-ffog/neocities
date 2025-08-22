@@ -87,6 +87,10 @@ li {
   margin: 15px;
 }
 
+pre {
+  overflow-x: scroll;
+}
+
 @media only screen and (max-width: 1000px) {
   .w25 {
     width: 95%;
