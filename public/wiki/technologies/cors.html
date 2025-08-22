@@ -14,38 +14,35 @@
 <h1><em>CORS (Cross-Origin Resource Sharing)</em></h1>
 
 <p>
-Como o nome já diz, isso é um política para compartilhamento de recursos
-entre diferentes origens. Por padrão os navegadores só permitem você fazer
-requisições XMLHttpRequest ou FetchAPI para origens iguais. Então, por
-exemplo, se você tiver no domínio "www.whitefog.com" e tentar fazer uma
-requisição para "www.blackfog.com", sendo que "balckfog" não permite explicitamente
-requisições feitas pelo domíno do whitefog, o seu navegador vai dar um erro de
-<em>CORS</em>.
+É uma política de compartilhamento de recursos entre diferentes origens. Por
+padrão os navegadores só permitem que você faça requisições
+<em>XMLHttpRequest</em> ou <em>FetchAPI</em> de mesma origem. Então, por
+exemplo, se você estiver no domínio <em>"www.whitefog.com"</em> e tentar fazer
+uma requisição para <em>"www.blackfog.com"</em>, sendo que "balckfog" não
+permite explicitamente requisições feitas pelo domíno do whitefog, o seu
+navegador vai dar um erro de <em>CORS</em>.
 </p>
 <p>
-Agora, como blackfog define o que é permitido ou não, e como whitefog descobre
-isso? A resposta é, whitefog faz uma "pre-requisição" a blackfog utilizando o
-método <em>HTTP OPTIONS</em>. Essa requisição pode ser aprovada ou reprovada
-por blackfog. Se ela for aprovada o conteúdo vem normal, caso contrário você vai
-receber o erro de <em>CORS</em>.
+Eis a questão: como blackfog define o que é permitido ou não e como whitefog
+descobre isso? A resposta é, whitefog faz uma "pre-requisição" a blackfog
+utilizando o método <em>HTTP OPTIONS</em>. Essa requisição pode ser aprovada ou
+reprovada por blackfog. Se ela for aprovada o conteúdo vem normal, caso
+contrário você vai receber um erro de <em>CORS</em>.
 </p>
 <p>
-É importante ressaltar que isso só e implementado por navegadores. Então, se você
-utilizar algo como <em>Postman</em> um curl da vida, nunca que vai acontecer um erro
-de <em>CORS</em>.
+É importante ressaltar que isso só e implementado por navegadores. Então, se
+você utilizar algo como <em>Postman</em> ou um curl da vida, nunca que vai
+acontecer um erro desses.
 </p>
 <p>
-Você pode se perguntar, PARA QUE SERVE ESSA PORRA? Como muitas coisas ne
-internet, isso traz mais segurança as navegadores. Serve para que um domínio
-diga se você pode ou não pegar dados dele, evitando que um site que você acesse
-faça requisição para um site de outra origem, sem que esse site da outra origem
-permita isso.
+Então você pode se perguntar: PARA QUE SERVE ESSA PORRA? Como muitas coisas na
+internet, isso traz maior segurança aos navegadores. Serve para que uma origem
+diga se você pode ou não pegar dados dela, evitando que um site que você acesse
+faça requisições para outra origem sem permissão.
 </p>
 <p>
-É importante você imaginar que sem o CORS, qualquer site podeira fazer
-requisições em nome do seu navegador. Só acessando um site, esse poderia fazer
-uma requisição para um site, por exemplo um site bancário utilizando a
-identidade do seu navegador por exemplo.
+É importante você imaginar que sem o <em>CORS</em>, qualquer site podeira fazer
+requisições em nome do seu navegador. 
 </p>
 
 <h2>Referências</h2>

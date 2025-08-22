@@ -20,14 +20,15 @@
 </ul>
 
 <p>
-O postgres cria um novo processo para cada cliente conectado. Assim, se 100 clientes
-se conectam ao banco de dados, então 100 processos vão ser abertos para cada conexão,
-isso é lento, ineficiente e não escala (famosa frase no mundo da tecnologia).
+Para cada conexão nova, o server Postgres cria um novo processo. Assim, se 100
+clientes se conectarem ao banco de dados, então 100 processos serão abertos.
+Isso é lento, ineficiente e não escala (famosa frase no mundo da tecnologia).
 </p>
 <p>
-O <em>PgBouncer</em> atua como um <em>middleware</em> entre os clientes e o banco.
-Os cliente se conectam ao PgBouncer da mesma maneira que se conectariam ao banco.
-Assim, o PgBouncer cuida de todas as requisições de maneira eficiente.
+O <em>PgBouncer</em> atua como um <em>middleware</em> entre os clientes e o
+servidor Postgres. Os cliente se conectam ao PgBouncer da mesma maneira que se
+conectariam ao servidor Postgres. Assim, o PgBouncer é encarregado de lidar com
+todas as requisições de maneira eficiente.
 </p>
 <p>
 Em resumo, o PgBouncer diminui a sobrecarga de abrir várias conexões com um 

@@ -15,7 +15,7 @@
 
 <ul>
     <li>
-        <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html">Site Oficial</a>
+        <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html">Site Oficial do Amazon SQS</a>
     </li>
 </ul>
 
@@ -27,26 +27,30 @@ Mais um serviço <em>"simples"</em> da Amazon, como o S3 (Simples Storage Servic
 SQS é um serviço de <em>queue</em> da Amazon. Ele permite você criar uma fila de
 mensagens. Aí você me diz: "tá, beleza e por que eu iria precisar de uma
 <em>queue</em>?".  É mais fácil você entender imaginando o que podeira acontecer
-se você não tivesse essa fila. Então considere o seguinte cenário.
+se você não tivesse essa fila. Então considere o seguinte cenário:
 </p>
 
 <pre class="center-text">
 Cliente <------> Servidor
 </pre>
 
+<p>
 Bem simples, o cliente manda requisições e o servidor responde. Agora, uma
-limitação dessa arquitetura é que o servidor precisa sempre está <em>up</em>.
-Se ele não tiver, as requisições que foram feitas para ele são perdidas. Assim,
-um serviço de fila pode ser utilizado. Então a arquitetura ficaria:
+limitação dessa arquitetura é que o servidor precisa sempre estar <em>up</em>.
+Caso contrário, as requisições que foram serão perdidas. Logo, um serviço de
+fila pode ser utilizado. Então a arquitetura ficaria:
+</p>
 
 <pre class="center-text">
 Cliente <--> Queue <--> Servidor
 </pre>
 
+<p>
 A requisição do cliente fica na fila e quando o servidor estiver pronto ele vai
-lá resolve essa requisição. Em caso de falha no servidor tudo fica salvo na queue.
-O que foi feito aqui foi desacoplar o sistema, diminuindo a dependência entre as 
-partes.
+lá resolve essa requisição. Em caso de falha em uma das pontas, tudo fica salvo
+na queue. O que foi feito aqui foi desacoplar o sistema, diminuindo a
+dependência entre as partes.
+</p>
 
 </body>
 </html>
