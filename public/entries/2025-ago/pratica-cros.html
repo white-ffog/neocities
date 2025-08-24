@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhiteFog 🌁</title>
+<link rel="stylesheet" href="/styles/normalize.css">
+<link rel="stylesheet" href="/styles/base.css">
+<script src="/scripts/init.js"></script>
+</head>
+
+<body>
+
+<h1>Prática <em>CORS</em></h1>
+
+<p>
+Feita a explicação teórica sobre <a
+href="/wiki/technologies/cors.html"><em>CORS</em></a>, irei dar um exemplo
+prático. Para isso utilizarei o <em>Node.js</em>, o <em>runtime desktop</em> do
+JavaScript, e o framework web <em>Express</em>. Assim, considere os dois códigos
+abaixo:
+</p>
+<figure class="w75">
+    <figcaption>front.js</figcaption>
+    <img src="./images/front-js.png" alt="">
+</figure>
+<p>
+Esse código cria um servidor web na porta 3001. Ao acessar o diretório raiz,
+o servidor retorna um página html. Isso vai representar o <em>front-end</em> da aplicação.
+</p>
+<figure class="w75">
+    <figcaption>back.js</figcaption>
+    <img src="./images/back1-js.png" alt="">
+</figure>
+<p>
+Esse código cria um servidor web na porta 3000. Ao acessar o diretório raiz,
+o servidor retorna um json com a propriedade message igual a 'Hello World'. 
+Isso vai representar o <em>back-end</em> da aplicação.
+</p>
+<p>
+Segue abaixo o código html da página servida pelo front-end.
+</p>
+<figure class="w75">
+    <figcaption>index.html</figcaption>
+    <img src="./images/front-html.png" alt="">
+</figure>
+<p>
+Esse página html mostra o texto 'Hello World' no centro da tela e faz um
+requisição ao <em>back-end</em> utilizando a <em>FetchAPI</em>. Segue abaixo Uma
+visualização dessa página html no navegador.
+</p>
+<figure class="w75">
+    <figcaption>Screenshot Navegador</figcaption>
+    <img src="./images/browser1.png" alt="">
+</figure>
+<p>
+Perceba que como não configuramos o cors no <em>back-end</em>, o navegador retorna um
+error ao tentar utilizar o <em>FetchAPI</em>.
+</p>
+<figure class="w75">
+    <figcaption>Erro de CORS</figcaption>
+    <img src="./images/console-error.png" alt="">
+</figure>
+<p>
+Para resolver isso, irei adicionar um <em>middleware</em>. Um
+<em>middleware</em> é um função que irar ser executada antes de qualquer
+requisição feita ao back-end. No caso desse, seu objetivo vai ser adicionar as
+diretivas de <em>CORS</em> permitindo os cabeçalhos e a origem do meu front-end
+(<em>localhost:3001</em>).
+</p>
+<figure class="w75">
+    <figcaption>back.js (ajustado)</figcaption>
+    <img src="./images/back2-js.png" alt="">
+</figure>
+<p>
+Agora, reiniciando o <em>back-end</em> e tentando acessar o <em>front-end</em>, o error
+de CORS não aparece mais e o retorno do <em>back-end</em> é mostrado.
+</p>
+<figure class="w75">
+    <figcaption>Screenshot Navegador</figcaption>
+    <img src="./images/browser2.png" alt="">
+</figure>
+
+
+</body>
+</html>
