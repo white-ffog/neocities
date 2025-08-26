@@ -5,6 +5,7 @@ const header_html = `
 <a href="/">🏡Início</a><span class="no-select"> | </span>
 <a href="/entries.html">🔍Entradas</a><span class="no-select"> | </span>
 <a href="/wiki.html">📖Wiki</a><span class="no-select"> | </span>
+<a href="/rabbit-holes.html">🕳️🐰 Rabbit Holes</a><span class="no-select"> | </span>
 <a href="/about.html">🤔Sobre</a>
 <hr />
 `
