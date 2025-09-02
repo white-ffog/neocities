@@ -139,8 +139,10 @@ audio {
   font-size: 0.6em;
 }
 
-.center-text {
-  text-align: center;
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1000px) {
