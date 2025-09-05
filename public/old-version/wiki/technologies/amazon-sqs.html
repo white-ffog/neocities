@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhiteFog 🌁</title>
+<link rel="stylesheet" href="/old-version/styles/normalize.css">
+<link rel="stylesheet" href="/old-version/styles/base.css">
+<script src="/old-version/scripts/init.js" defer></script>
+</head>
+
+<body>
+
+<h1>Amazon SQS (Simple Queue Server)</h1>
+
+<ul>
+    <li>
+        <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html">Site Oficial do Amazon SQS</a>
+    </li>
+</ul>
+
+<p class="blue small">
+Mais um serviço <em>"simples"</em> da Amazon, como o S3 (Simples Storage Service)
+</p>
+
+<p>
+SQS é um serviço de <em>queue</em> da Amazon. Ele permite você criar uma fila de
+mensagens. Aí você me diz: "tá, beleza e por que eu iria precisar de uma
+<em>queue</em>?".  É mais fácil você entender imaginando o que podeira acontecer
+se você não tivesse essa fila. Então considere o seguinte cenário:
+</p>
+
+<pre class="center-text">
+Cliente <------> Servidor
+</pre>
+
+<p>
+Bem simples, o cliente manda requisições e o servidor responde. Agora, uma
+limitação dessa arquitetura é que o servidor precisa sempre estar <em>up</em>.
+Caso contrário, as requisições que foram serão perdidas. Logo, um serviço de
+fila pode ser utilizado. Então a arquitetura ficaria:
+</p>
+
+<pre class="center-text">
+Cliente <--> Queue <--> Servidor
+</pre>
+
+<p>
+A requisição do cliente fica na fila e quando o servidor estiver pronto ele vai
+lá resolve essa requisição. Em caso de falha em uma das pontas, tudo fica salvo
+na queue. O que foi feito aqui foi desacoplar o sistema, diminuindo a
+dependência entre as partes.
+</p>
+
+</body>
+</html>

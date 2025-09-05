@@ -1,167 +1,23 @@
-#logo {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
+@font-face {
+  font-family: SauceCodeProNerdFont;
+  src: url(/fonts/SauceCodeProNerdFont.ttf);
 }
 
-#nav-menu {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 0.9em;
+
+body {
+    background-color: #282c34;
+    color: #abb2bf;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#trademark {
-  margin: 30px 0;
-}
-
-#regard {
-  font-size: 0.7em;
-}
-
-input,
-textarea,
-button,
-option,
-select {
-  background-color: #343a40;
-  color: #abb2bf;
-  border-radius: 5px;
-  border: 2px solid #abb2bf;
-  transition: scale 0.2s, opacity 0.2s;
-  padding: 5px;
-  margin: 5px;
-}
-
-button:hover {
-  opacity: 0.9;
-  scale: 105%;
+* {
+    font-family: SauceCodeProNerdFont
 }
 
 a {
-  text-decoration: none;
   color: #678dd9;
-  display: inline-block;
-  transition: transform 0.3s;
-}
-
-a:hover {
-  transform: scale(110%);
 }
 
 a:visited {
   color: #3f5f9f;
-}
-
-mark {
-  background-color: #abb2bf;
-  color: #282c34;
-}
-
-body {
-  background-color: F0F0F0;
-  background-color: #282c34;
-  color: #abb2bf;
-  font-size: 1.5em;
-  margin: 0 15px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-figure {
-  margin: 10px auto;
-}
-
-figure img {
-  width: 100%;
-}
-
-figure figcaption {
-  width: 100%;
-  font-size: 0.9em;
-  /* font-style: italic; */
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-li {
-  margin: 15px;
-}
-
-pre {
-  overflow-x: scroll;
-}
-
-audio {
-  display: block;
-  margin: 0 auto;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.red {
-  color: #dc3545;
-}
-
-.green {
-  color: #27a444;
-}
-
-.yellow {
-  color: #ffc107;
-}
-
-.blue {
-  color: #007bff;
-}
-
-.no-select {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
-.w25 {
-  width: 25%;
-}
-
-.w50 {
-  width: 50%;
-}
-
-.w75 {
-  width: 75%;
-}
-
-.small {
-  font-size: 0.6em;
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media only screen and (max-width: 1000px) {
-  .w25 {
-    width: 95%;
-  }
-
-  .w50 {
-    width: 95%;
-  }
-
-  .w75 {
-    width: 95%;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  body {
-    margin: 0 200px;
-    font-size: 1.9em;
-  }
 }
