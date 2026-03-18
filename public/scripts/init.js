@@ -1,42 +1,29 @@
-const header = `
---------------------------------------------------------------------------------
+const header_html = `
+<h1 id="logo"> WhiteFog 🌁</h1>
 
-                          _       ____    _ __     
-                          | |     / / /_  (_) /____ 
-                          | | /| / / __ \\/ / __/ _ \\
-                          | |/ |/ / / / / / /_/  __/
-                          |__/|__/_/ /_/_/\\__/\\___/ 
-                             / ____/___  ____ _     
-                            / /_  / __ \\/ __ \\\`/     
-                           / __/ / /_/ / /_/ /      
-                          /_/    \\____/\\__, /       
-                                      /____/        
-
---------------------------------------------------------------------------------
+<nav id="nav-menu">
+<a href="/">🏡Início</a><span class="no-select"> | </span>
+<a href="/entries.html">🔍Entradas</a><span class="no-select"> | </span>
+<a href="/wiki.html">📖Wiki</a><span class="no-select"> | </span>
+<a href="/rabbit-holes.html">🕳️🐰 Rabbit Holes</a><span class="no-select"> | </span>
+<a href="/about.html">🤔Sobre</a>
+<hr />
 `
 
-const footer = `
---------------------------------------------------------------------------------
-              © WhiteFog, 2025 | Contato: dopauarthur@gmail.com
---------------------------------------------------------------------------------
+const footer_html = `
+<hr />
+<div><em id="regard">"Esse site é feito por um humano. Logo, como todo
+humano, ele vai errar. Sempre confirme as informações
+em outras fontes"</em></div>
+<div id="trademark"> © WhiteFog, 2025 | Contato: dopauarthur@gmail.com<div/>
 `
 
-document.addEventListener("DOMContentLoaded", () => {
-    head = document.head || document.getElementsByTagName('head')[0]
-    body = document.body || document.getElementsByTagName('body')[0]
+window.addEventListener("load", () => {
+    const header = document.createElement("header")
+    header.innerHTML = header_html
+    const footer = document.createElement("footer")
+    footer.innerHTML = footer_html
 
-    link = document.createElement('link');
-    link.rel = "stylesheet"
-    link.href = "/styles/base.css"
-
-    head.appendChild(link);
-
-    const pre_header = document.createElement("pre")
-    const pre_footer = document.createElement("pre")
-
-    pre_header.innerText = header
-    pre_footer.innerText = footer
-
-    body.prepend(pre_header)
-    body.append(pre_footer)
-})
+    document.body.prepend(header)
+    document.body.append(footer)
+});
