@@ -4,19 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhiteFog 🌁</title>
-    <link rel="stylesheet" href="/styles/normalize.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/sanitize.css">
+    <link rel="stylesheet" href="/styles/7.css">
     <link rel="stylesheet" href="/styles/base.css">
-    <script src="/scripts/init.js" defer></script>
+
+    <style>
+        #window-background {
+            max-width: 800px;
+            margin: 80px auto;
+        }
+
+        #window-body {
+            height: 500px;
+        }
+    </style>
 </head>
 
-<body>
-    <figure class="w50">
-        <img src="/images/lake-fog.gif" alt="Lake with fog">
-    </figure>
-    <p style="text-align: center;">
-        Hi! I'am Legrug. Welcome to my blog WhiteFog!
-    </p>
+<body style="background-image: url('/images/bg-fog-3.jpg');">
+    <div id="window-background" class="background">
+        <div class="window glass active">
+            <div class="title-bar">
+                <div class="title-bar-text">White Fog️</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div id="window-body" class="window-body">
+                <ul role="menubar">
+                    <li role="menuitem" tabindex="0">Home</li>
+                    <li role="menuitem" tabindex="0">Blogs</li>
+                </ul>
+                <div class="p1">
+                    <h1>Sobre</h1>
+
+                    <img src="/images/whitefog.png" alt="" width="200px" class="margin-center">
+
+                    <h2>English</h2>
+                    <p>
+                        My name is <strong>Legrug</strong>, a Computer Science graduate. I really like
+                        the tech area, more specifically backend and gamedev. English is not my first
+                        language, so probably any english text here will have a <strong>LOT</strong>
+                        of mistakes. I don't find this bad at all. In an era where Machine Learning
+                        models are writing perfect "Linkeding" level English, texts like this are
+                        rare.
+                    </p>
+
+                    <h2>Portuguese Brazil</h2>
+                    <p>
+                        Me chamo <strong>Legrug</strong>. Sou formado em Ciências da Computação. Gosto
+                        da área de tecnologia, mais especificamente a parte de backend e desenvolvimento
+                        de jogos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
