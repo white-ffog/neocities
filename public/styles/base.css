@@ -1,7 +1,28 @@
-.p1 {
-    padding: 10px;
+/* Classes */
+
+.image-center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-margin-center {
-    margin: 0 auto;
+.image-right {
+    display: block;
+    float: right;
+}
+
+/* Fixes */
+
+.window-body div:first-of-type {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.window-body {
+    overflow-y: auto;
+}
+
+ul[role="menubar"] {
+    top: 0;
+    position: sticky;
 }
