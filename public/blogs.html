@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="/styles/sanitize.css">
     <link rel="stylesheet" href="/styles/7.css">
     <link rel="stylesheet" href="/styles/base.css">
+    <script src="/scripts/cpu_usage.js" defer></script>
 </head>
 
 <body style="background-image: url('/images/bg-fog-4.jpg');">
-    <div id="window-background" class="background" style="margin: 130px auto; max-width: 700px;">
-        <div class="window glass active">
+    <div id="frame">
+        <div id="main-window" class="window glass active">
             <div class="title-bar">
                 <div class="title-bar-text">Blogs - White Fog</div>
                 <div class="title-bar-controls">
@@ -21,27 +22,27 @@
                     <button aria-label="Close"></button>
                 </div>
             </div>
-            <div id="window-body" class="window-body has-scrollbar" style="height: 500px;">
+            <div class="window-body has-scrollbar">
                 <a role="button" style="margin:5px; float: right;" href="/blogs.html">Blogs</a>
                 <a role="button" style="margin:5px; float: right;" href="/index.html">Home</a>
-                <div style="padding: 15px 30px;">
+                <ul class="tree-view has-collapse-button has-connector has-container" style="font-size: 1.2rem; margin: 50px 20px">
                     <details open>
                         <summary>2026 - March</summary>
                         <ul>
                             <li>
-                                <a href="/blogs/mar-2026/concurso.html">Errou? faz Estácio!</a>
+                                <a href="/blogs/mar-2026/concurso.html">Day 22 - Errou? faz Estácio!</a>
                             </li>
                             <li>
-                                <a href="/blogs/mar-2026/voltando.html">Voltando com o blog.</a>
+                                <a href="/blogs/mar-2026/voltando.html">Day 18 - Voltando com o blog.</a>
                             </li>
                         </ul>
                     </details>
-                </div>
+                </ul>
             </div>
             <div class="status-bar">
                 <p class="status-bar-field">© WhiteFog, 2025</p>
                 <p class="status-bar-field">Contato: dopauarthur@gmail.com</p>
-                <p class="status-bar-field">CPU Usage: 40%</p>
+                <p id="cpu-usage" class="status-bar-field">CPU Usage: 40%</p>
             </div>
         </div>
     </div>

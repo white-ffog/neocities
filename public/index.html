@@ -8,11 +8,37 @@
     <link rel="stylesheet" href="/styles/sanitize.css">
     <link rel="stylesheet" href="/styles/7.css">
     <link rel="stylesheet" href="/styles/base.css">
+    <script src="/scripts/cpu_usage.js" defer></script>
+    <style>
+        @media (max-width: 1050px) {
+            #legrug-window {
+                display: none;
+            }
+
+            #home-window {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body style="background-image: url('/images/bg-fog-5.jpg');">
-    <div id="window-background" class="background" style="margin: 130px auto; max-width: 700px;">
-        <div class="window glass active">
+    <div id="frame">
+        <div id="legrug-window" class="window glass" style="width: 300px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Legrug</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img src="/images/axe_killer.gif" alt="" style="width: 100%;" class="image-center">
+            </div>
+        </div>
+
+        <div id="main-window" class="window glass active">
             <div class="title-bar">
                 <div class="title-bar-text">Home - White Fog</div>
                 <div class="title-bar-controls">
@@ -21,11 +47,11 @@
                     <button aria-label="Close"></button>
                 </div>
             </div>
-            <div id="window-body" class="window-body has-scrollbar" style="height: 500px;">
+            <div class="window-body has-scrollbar">
                 <a role="button" style="margin:5px; float: right;" href="/blogs.html">Blogs</a>
                 <a role="button" style="margin:5px; float: right;" href="/index.html">Home</a>
                 <div>
-                    <h2 style="margin-top: 6px;">English</h2>
+                    <h2>English</h2>
                     <p>
                         My name is <strong>Legrug</strong>, a Computer Science graduate. I really like
                         the tech area, more specifically backend and gamedev. English is not my first
@@ -46,36 +72,22 @@
             <div class="status-bar">
                 <p class="status-bar-field">© WhiteFog, 2025</p>
                 <p class="status-bar-field">Contato: dopauarthur@gmail.com</p>
-                <p class="status-bar-field">CPU Usage: 14%</p>
+                <p id="cpu-usage" class="status-bar-field">CPU Usage: 14%</p>
             </div>
         </div>
-    </div>
 
-    <div class="window glass" style="width: 300px; position: absolute; top: 150px; left: 40px; z-index: -1;">
-        <div class="title-bar">
-            <div class="title-bar-text">Legrug</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close"></button>
+        <div id="home-window" class="window glass" style="width: 300px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Logo</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
             </div>
-        </div>
-        <div class="window-body">
-            <img src="/images/axe_killer.gif" alt="" style="width: 100%;" class="image-center">
-        </div>
-    </div>
-
-    <div class="window glass" style="width: 300px; position: absolute; top: 160px; left: 1200px">
-        <div class="title-bar">
-            <div class="title-bar-text">Home</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close"></button>
+            <div class="window-body">
+                <img src="/images/whitefog.png" alt="" style="width: 100%;" class="image-center">
             </div>
-        </div>
-        <div class="window-body">
-            <img src="/images/whitefog.png" alt="" style="width: 100%;" class="image-center">
         </div>
     </div>
 </body>
