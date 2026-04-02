@@ -1,10 +1,10 @@
-.image-center {
+.center {
     display: block;
     margin-right: auto;
     margin-left: auto;
 }
 
-.image-right {
+.right {
     display: block;
     float: right;
 }

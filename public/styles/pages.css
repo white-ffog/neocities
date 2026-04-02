@@ -1,12 +1,23 @@
-body {
-    background-image: url('/images/backgrounds/sunset_bridge.jpg');
+.red {
+    color: rgba(220, 53, 69, 1);
+}
+
+.blue {
+    color: rgba(13, 110, 253, 1)
+}
+
+.green {
+    color: rgba(25, 135, 84, 1);
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 #frame {
     flex-direction: column;
     height: 100vh;
 }
-
 
 /* Adjust window size on smaller windows */
 @media (max-width: 700px) {
