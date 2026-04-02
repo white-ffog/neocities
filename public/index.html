@@ -36,7 +36,7 @@
 
 <body>
     <div id="frame">
-        <div id="legrug-window" class="window glass" style="width: 300px;">
+        <aside id="legrug-window" class="window glass" style="width: 300px;">
             <div class="title-bar">
                 <div class="title-bar-text">Legrug</div>
                 <div class="title-bar-controls">
@@ -48,7 +48,7 @@
             <div class="window-body">
                 <img src="/images/axe_killer.gif" alt="" style="width: 100%;" class="image-center">
             </div>
-        </div>
+        </aside>
 
         <div id="main-window" class="window glass active">
             <div class="title-bar">
@@ -60,13 +60,15 @@
                 </div>
             </div>
             <div class="window-body has-scrollbar">
-                <ul role="menubar">
-                    <a role="menuitem" tabindex="0" href="/index.html">Home</a>
-                    <a role="menuitem" tabindex="0" href="/blogs.html">Blogs</a>
-                </ul>
-                <!-- <a role="button" style="margin:5px; float: right;" href="/blogs.html">Blogs</a>
-                <a role="button" style="margin:5px; float: right;" href="/index.html">Home</a> -->
-                <div>
+                <header>
+                    <nav>
+                        <ul role="menubar">
+                            <a role="menuitem" tabindex="0" href="/index.html">Home</a>
+                            <a role="menuitem" tabindex="0" href="/blogs.html">Blogs</a>
+                        </ul>
+                    </nav>
+                </header>
+                <article>
                     <h2>English</h2>
                     <p>
                         My name is <strong>Legrug</strong>, a Computer Science graduate. I really like
@@ -83,16 +85,16 @@
                         da área de tecnologia, mais especificamente a parte de backend e desenvolvimento
                         de jogos.
                     </p>
-                </div>
+                </article>
             </div>
-            <div class="status-bar">
+            <footer class="status-bar" style="padding: 0;">
                 <p class="status-bar-field">© WhiteFog, 2025</p>
                 <p class="status-bar-field">Contato: dopauarthur@gmail.com</p>
                 <p id="cpu-usage" class="status-bar-field">CPU Usage: 14%</p>
-            </div>
+            </footer>
         </div>
 
-        <div id="home-window" class="window glass" style="width: 300px;">
+        <aside id="home-window" class="window glass" style="width: 300px;">
             <div class="title-bar">
                 <div class="title-bar-text">Logo</div>
                 <div class="title-bar-controls">
@@ -104,7 +106,7 @@
             <div class="window-body">
                 <img src="/images/whitefog.png" alt="" style="width: 100%;" class="image-center">
             </div>
-        </div>
+        </aside>
     </div>
 </body>
 

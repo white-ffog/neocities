@@ -36,15 +36,15 @@ body {
     height: 500px;
 }
 
-#main-window .window-body div:first-of-type {
+#main-window .window-body article:first-of-type {
     padding: 10px;
 }
 
-#main-window .window-body div:first-of-type *:first-child {
+#main-window .window-body article:first-of-type *:first-child {
     margin-top: 0;
 }
 
-#main-window .window-body div:first-of-type *:last-child {
+#main-window .window-body article:first-of-type *:last-child {
     margin-bottom: 0;
 }
 
