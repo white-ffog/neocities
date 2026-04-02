@@ -19,10 +19,22 @@
                 display: none;
             }
         }
+
+        body {
+            background-image: url('/images/bg-fog-5.jpg');
+
+            height: 100vh;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            background-attachment: fixed;
+        }
     </style>
 </head>
 
-<body style="background-image: url('/images/bg-fog-5.jpg');">
+<body>
     <div id="frame">
         <div id="legrug-window" class="window glass" style="width: 300px;">
             <div class="title-bar">
@@ -48,8 +60,12 @@
                 </div>
             </div>
             <div class="window-body has-scrollbar">
-                <a role="button" style="margin:5px; float: right;" href="/blogs.html">Blogs</a>
-                <a role="button" style="margin:5px; float: right;" href="/index.html">Home</a>
+                <ul role="menubar">
+                    <a role="menuitem" tabindex="0" href="/index.html">Home</a>
+                    <a role="menuitem" tabindex="0" href="/blogs.html">Blogs</a>
+                </ul>
+                <!-- <a role="button" style="margin:5px; float: right;" href="/blogs.html">Blogs</a>
+                <a role="button" style="margin:5px; float: right;" href="/index.html">Home</a> -->
                 <div>
                     <h2>English</h2>
                     <p>
