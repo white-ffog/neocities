@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/sanitize.css">
+    <link rel="stylesheet" href="/styles/7.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/pages.css">
+    <script src="/scripts/pages.js" defer></script>
+
+</head>
+
+<body>
+    <div id="frame">
+        <div id="main-window" class="window glass active">
+            <div class="title-bar">
+                <div class="title-bar-text">Voltando</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body has-scrollbar">
+                <header id="menubar">
+                    <nav>
+                        <ul role="menubar">
+                            <a role="menuitem" tabindex="0" href="/blogs.html">Back</a>
+                        </ul>
+                    </nav>
+                </header>
+                <article id="main-article">
+                    <page>
+                        <h1>Voltando com o Blog</h1>
+                        <p>
+                            Estou mudando o estilo do blog para o tema
+                            <strong>Aero</strong>. Mais especificamente algo que
+                            remeta a época do <strong>Windows 7</strong>. Agora
+                            os blogs vão seguir esse sistema de páginas. Utilize
+                            os botões inferiores para passar para a próxima
+                            página. Também é possível passar as páginas
+                            utilizando as <strong>setas</strong> (← →) do teclado ou (para quem
+                            sabe) as <strong>teclas do VIM</strong>.
+                        </p>
+                    </page>
+                    <page>
+                        <h1>Outra página</h1>
+                        <p>
+                            Acredito que esse sistema é bem mais
+                            <strong>coeso</strong>. Algo parecido com um livro.
+                        </p>
+                    </page>
+                </article>
+            </div>
+            <footer class="status-bar" style="padding: 0;">
+                <p class="status-bar-field">© WhiteFog, 2025</p>
+                <p class="status-bar-field">Create At: 2026-04-02</hp>
+                <p class="status-bar-field">Updated At: 2026-04-02</p>
+            </footer>
+        </div>
+
+        <aside id="page-window" class="window glass">
+            <div class="title-bar">
+                <div class="title-bar-text">Page Controls</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <button id="previous">Previous</button>
+                <div>
+                    Page
+                    <input id="current-page" type="text">
+                    Of
+                    <input id="total-page" type="text" disabled>
+                </div>
+                <button id="next">Next</button>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>

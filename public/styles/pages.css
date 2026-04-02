@@ -1,0 +1,22 @@
+body {
+    background-image: url('/images/backgrounds/sunset_bridge.jpg');
+}
+
+#frame {
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* Adjust window size on smaller windows */
+@media (max-width: 700px) {
+    #main-window {
+        margin: 0;
+        width: 95%;
+    }
+
+    #page-window {
+        margin: 0;
+        width: 95%;
+    }
+}

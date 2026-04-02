@@ -1,5 +1,3 @@
-/* Classes */
-
 .image-center {
     display: block;
     margin-right: auto;
@@ -11,8 +9,21 @@
     float: right;
 }
 
-/* Fixes */
+page {
+    display: block;
+}
 
+/* Remove margin from fist element of a page */
+page>*:first-child {
+    margin-top: 0;
+}
+
+/* Make overflow content of window scrollable */
+.window-body {
+    overflow-y: auto;
+}
+
+/* Remove icon style from menuitem links */
 a[role="menuitem"] {
     color: black;
 }
@@ -22,6 +33,13 @@ a[role="menuitem"]:hover {
     text-decoration: none;
 }
 
+/* Stick menubar on the top of window */
+ul[role="menubar"] {
+    top: 0;
+    position: sticky;
+}
+
+/* Configure background image to cover hole screen */
 body {
     background-size: cover;
     background-repeat: space;
@@ -39,6 +57,22 @@ body {
     top: 0;
 }
 
+#page-window .window-body {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+#previous, #next {
+    height: 30px;
+}
+
+#page-window input {
+    width: 40px;
+}
+
 #main-window {
     font-size: 1.2rem;
     overflow-x: auto;
@@ -49,18 +83,31 @@ body {
     height: 500px;
 }
 
+/* Add pedding on window content */
 #main-window .window-body article:first-of-type {
     padding: 10px;
 }
 
-#main-window .window-body article:first-of-type *:first-child {
+/* Remove margin from first and last window content elements */
+#main-window .window-body article>*:first-child {
     margin-top: 0;
 }
 
-#main-window .window-body article:first-of-type *:last-child {
+#main-window .window-body article>*:last-child {
     margin-bottom: 0;
 }
 
+/* Flex display for multiwindow */
+#frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 95vh;
+}
+
+
+/* Adjust window size on smaller windows */
 @media (max-width: 700px) {
     #main-window {
         font-size: 0.9rem;
@@ -75,21 +122,14 @@ body {
     #main-window .status-bar {
         font-size: 0.6rem;
     }
-}
 
-#frame {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    height: 95vh;
-}
+    #page-window {
+        font-size: 0.9rem;
+        margin: 0 15px;
+        width: 100%;
+    }
 
-.window-body {
-    overflow-y: auto;
-}
-
-ul[role="menubar"] {
-    top: 0;
-    position: sticky;
+    #page-window .window-body {
+        width: auto;
+    }
 }
