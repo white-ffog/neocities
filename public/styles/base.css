@@ -34,8 +34,14 @@ body {
     background-attachment: fixed;
 }
 
+#menubar {
+    position: sticky;
+    top: 0;
+}
+
 #main-window {
     font-size: 1.2rem;
+    overflow-x: auto;
 }
 
 #main-window .window-body {
@@ -59,6 +65,7 @@ body {
     #main-window {
         font-size: 0.9rem;
         margin: 0 15px;
+        width: 100%;
     }
 
     #main-window .window-body {
