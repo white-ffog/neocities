@@ -9,6 +9,11 @@
     float: right;
 }
 
+.left {
+    display: block;
+    float: left;
+}
+
 page {
     display: block;
 }

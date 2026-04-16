@@ -39,7 +39,7 @@
                 </header>
                 <article id="main-article">
                     <page>
-                        <h1>Errou? Faz Estácio!</h1>
+                        <h3>Errou? Faz Estácio!</h3>
                         <p>
                             Esse mês eu fiz o concurso da UFCA. Foi o minha primeira
                             vez fazendo concurso. Eram 3 vagas (ampla concorrência)
@@ -84,7 +84,7 @@
                         </table>
                     </page>
                     <page>
-
+                        <h3>Errou? Faz Estácio!</h3>
                         <p>
                             A única coisa que usei para estudar foi uma prova
                             que teve ano passado da mesma banca e área. Perfil
@@ -111,6 +111,7 @@
                         </p>
                     </page>
                     <page>
+                        <h3>Errou? Faz Estácio!</h3>
                         <p>
                             Tanto pessoas inteligentes, quanto pessoas burras
                             erram constantemente. O que diferencia os dois é que
@@ -457,8 +458,11 @@
                             falando da Corte Internacional de Justiça.
                             Resumindo, ela visa resolve disputas entre Estados.
                         </p>
+                    </page>
+                    <page>
+                        <h3>Questão 20 (Legislação)</h3>
                         <p>
-                            A alternativa B está errada por causa da ordem. Ela
+                            A alternativa C está errada por causa da ordem. Ela
                             fala de submeter a controvérsia diretamente a Corte
                             de Haia e depois para o CIJ. Porém, o certo era
                             primeiro submeter a controvérsia a uma arbitragem e
@@ -470,12 +474,434 @@
                             está no artigo 12 da convenção citada.
                         </p>
                     </page>
+                    <page>
+                        <h3>Questão 23 (Específicas)</h3>
+                        <p>
+                            Um sistema backend expõe uma funcionalidade administrativa que recebe entradas do usuário
+                            para
+                            executar rotinas no servidor. Em razão da ausência de validação adequada desses dados, um
+                            atacante consegue executar comandos arbitrários no sistema operacional do host . Essa falha
+                            de
+                            segurança é classificada como:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>A)</strong> Path Traversal.
+                            </li>
+                            <li class="green">
+                                <strong>B)</strong> Command Injection.
+                            </li>
+                            <li class="red">
+                                <strong>C)</strong> Cross-Site Scripting (XSS).
+                            </li>
+                            <li>
+                                <strong>D)</strong> XML External Entity (XXE).
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 23 (Específicas)</h3>
+                        <p>
+                            Quando eu lí a parte "consegue executar comandos
+                            arbitrários no sistema operacional do host" eu fui seco
+                            na alternativa XSS. Pra ser sincero eu não lembro de
+                            ser abordado "Command Injection" nas cadeiras de
+                            segurança da faculdade. Sem contar que "Cross-site
+                            Scripting" é um nome bem mais memorável que "Command Injection".
+                        </p>
+                        <p>
+                            Corrigi meus conhecimentos lendo o livro "Computer
+                            Security Principles and Practice 5th Edition".
+                            Vou explicar o que eu entendi baseado na minha leitura.
+                            Primeiro, irei abreviar "Command Injection" para CI e
+                            "Cross-Site Scripting" para XSS.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 23 (Específicas)</h3>
+                        <p>
+                            Tanto o CI quanto o XSS são ataques de injeção.
+                            Nesse tipo de ataque o usuário entra com um comando
+                            arbitrário que será executado em uma máquina alvo.
+                            A diferença é que o o código do CI é executado no
+                            Host do servidor, ou seja, a máquina que está
+                            rodando o WebServer. Já no XSS o código é executado
+                            na máquina de outro usuário. Por isso nome,
+                            "Cross-Site", o código vai do atacante para o
+                            servidor e do servidor para a vítima. No XSS o
+                            código <span class="red">não é executado no
+                                servidor</span>.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 23 (Específicas)</h3>
+                        <p>
+                            A questão deixa bem claro que o atacante consegue
+                            "executar comandos arbitrários no <span>sistema operacional
+                                do host</span>". Ou seja, se trada de um CI, não XSS.
+                        </p>
+                        <p>
+                            Se a questão tratasse de uma situação onde, por exemplo,
+                            em uma Wiki, um atacante consegue inserir códigos
+                            JavaScript em páginas específica. Nesse caso, seria
+                            XSS. Perceba que o código é somente injetado em uma página,
+                            mas não é executado no servidor. Esse código vai
+                            ser executado somente em vítimas que acessarem a
+                            página com o código malicioso.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 26 (Específicas)</h3>
+                        <p>
+                            Em um framework extensível orientado a objetos, o núcleo do sistema define operações
+                            abstratas
+                            que dependem da criação de objetos responsáveis por executar etapas específicas do
+                            processamento. O framework não conhece previamente as classes concretas desses objetos,
+                            delegando às subclasses a responsabilidade de decidir qual implementação concreta será
+                            instanciada. Essa abordagem permite a introdução de novos comportamentos sem modificar o
+                            código do núcleo do framework. Considerando os padrões de projeto GoF, assinale a
+                            alternativa
+                            correta.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>A)</strong> Adapter.
+                            </li>
+                            <li class="red">
+                                <strong>B)</strong> Strategy.
+                            </li>
+                            <li>
+                                <strong>C)</strong> Observer.
+                            </li>
+                            <li class="green">
+                                <strong>D)</strong> Factory Method.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 26 (Específicas)</h3>
+                        <p>
+                            A alternativa Observer não faz o menor sentido. O
+                            design pattern Observer define dependências one-to-many,
+                            aonde, quando o objeto Subject é atualizado, todos os
+                            objetos Observers são notificados. É aquele exemplo
+                            clássico de uma Newspaper. Diversas pessoas se
+                            inscrevem em uma Newspaper. Quando um novo conteúdo
+                            é criado, a Newspaper notifica todos os inscritos.
+                            Os inscritos são os Observers, a Newspaper é o Subject.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 26 (Específicas)</h3>
+                        <p>
+                            Eu marquei Strategy por causa dessa parte: "o núcleo
+                            do sistema define operações abstratas que dependem
+                            da criação de objetos responsáveis por executar
+                            etapas". Quando eu lí, objetos responsáveis por
+                            executar etapas, eu já pensei em composition, dai
+                            fui logo na alternativa Strategy.
+                        </p>
+                        <p>
+                            Porém, lendo agora o enunciado, é visível que ele
+                            está falando de um padrão aonde operações abstratas
+                            de uma classe depende da <span class="red">instanciação</span>
+                            de objetos concretos. Isso não tem nada a ver com o
+                            Strategy Pattern. O Strategy é sobre encapsula
+                            diferentes algoritmos intercambiáveis utilizando composição.
+                        </p>
+                        <p>
+                            O Design Patter Adapter, como o nome implica é
+                            sobre criar uma adaptador de uma interface X para
+                            uma interface Y. O enunciado nem cita a palavra
+                            a adaptar.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 26 (Específicas)</h3>
+                        <p>
+                            A resposta era Factory Method. Acredito que o
+                            checkmate nessa alternativa é quando ele fala
+                            <span>
+                                "delegando às subclasses a responsabilidade de
+                                decidir qual implementação concreta será
+                                instanciada"
+                            </span>. Ou seja, a super classe não sabe qual instanciação
+                            vai ser feita, ela delega isso para suas subclasses,
+                            o que é o principal comportamento do Factory.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 39 (Específicas)</h3>
+                        <p>
+                            Um analista precisa listar o nome de todos os clientes, independentemente de possuírem
+                            pedidos
+                            associados, e os identificadores dos pedidos cujo status seja 'APROVADO'. Para clientes que
+                            não
+                            possuam pedidos com esse status, o identificador do pedido deve ser exibido como NULL.
+                            Considere que as tabelas apresentadas estão corretamente modeladas em um banco de dados
+                            relacional PostgreSQL, com integridade referencial garantida por meio de chaves primárias e
+                            estrangeiras, sendo pedidos.cliente_id uma chave estrangeira que referencia clientes.id.
+                        </p>
+
+                        <div style="display: flex; gap: 30px;">
+                            <div>
+                                <p><strong>clientes</strong></p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>nome</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Ana Silva</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Bruno Costa</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Carla Lima</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Daniel Souza</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Elisa Rocha</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <p><strong>pedidos</strong></p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>cliente_id</th>
+                                            <th>status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>APROVADO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>PENDENTE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>APROVADO</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>CANCELADO</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <p>
+                            Assinale a consulta SQL que atende corretamente a todos os requisitos.
+                        </p>
+                        <ul>
+                            <li class="red">
+                                <strong>A)</strong> SELECT c.nome, p.id FROM clientes c LEFT JOIN pedidos p ON c.id =
+                                p.cliente_id WHERE p.status = 'APROVADO' OR p.id IS NULL;
+                            </li>
+                            <li class="green">
+                                <strong>B)</strong> SELECT c.nome, p.id FROM clientes c LEFT JOIN pedidos p ON c.id =
+                                p.cliente_id AND p.status = 'APROVADO';
+                            </li>
+                            <li>
+                                <strong>C)</strong> SELECT c.nome, p.id FROM clientes c INNER JOIN pedidos p ON c.id =
+                                p.cliente_id WHERE p.status = 'APROVADO';
+                            </li>
+                            <li>
+                                <strong>D)</strong> SELECT c.nome, p.id FROM clientes c LEFT JOIN pedidos p ON c.id =
+                                p.cliente_id HAVING p.status = 'APROVADO';
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 39 (Específicas)</h3>
+                        <p>
+                            A alternativa D nem roda, pois está usando uma
+                            clausula <span class="red">HAVING</span>. A letra
+                            C utiliza um <span class="red">INNER JOIN</span>, então
+                            não vai pegar "todos os clientes". A dúvida mesmo fica
+                            entre a alternativa A e B.
+                        </p>
+                        <p>
+                            Eu marquei a alternativa A) pesando: "GG Easy, só
+                            dar um LEFT JOIN, que vai pegar geral e depois
+                            filtra por APROVADO ou NULL". Porém, eu me esqueci
+                            do status PENDENTE. Ou seja, a alternativa A) remove
+                            pedidos pendentes.
+                        </p>
+                        <p>
+                            A alternativa B é mais sofisticada (e certa). Ela faz um LEFT
+                            JOIN somente com as tabelas de pedidos aprovados.
+                            E o que acontece com os outros casos? Ou seja,
+                            as que tem pedidos pendentes ou as que não tem pedido?
+                            A resposta é: voltam como NULL, justamente como a
+                            questão pediu.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 46 (Específicas)</h3>
+                        <p>
+                            No processo de medição do tamanho funcional de sistemas de software, a Análise por Pontos de
+                            Função (APF), conforme o padrão do IFPUG (International Function Point Users Group), prevê
+                            diferentes tipos de contagem, variando conforme o nível de informação disponível sobre os
+                            requisitos e as funcionalidades. Em determinadas situações iniciais do projeto, utiliza-se
+                            um tipo
+                            de contagem em que todas as funções recebem uma complexidade funcional previamente definida,
+                            sem detalhamento completo de seus elementos.
+                        </p>
+                        <p>
+                            Essa modalidade de contagem é tecnicamente denominada:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>A)</strong> Contagem Analítica.
+                            </li>
+                            <li>
+                                <strong>B)</strong> Contagem Indicativa.
+                            </li>
+                            <li class="green">
+                                <strong>C)</strong> Contagem Estimativa.
+                            </li>
+                            <li class="red">
+                                <strong>D)</strong> Contagem Preliminar.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 46 (Específicas)</h3>
+                        <p>
+                            Conteúdo sobre Análise de Pontos de Função na
+                            internet é bem escasso. Até as páginas da Wikipedia
+                            sobre sobre Análise de Pontos de Função e
+                            Pontos de Função são muito pequenas e carecem de
+                            detalhes.
+                        </p>
+                        <p>
+                            Os conteúdos do IFPUG e da ISO/IEC 20926:2009 que
+                            é o padrão que define os pontos de função são todos
+                            pagos, e não existe cópias em meios alternativos.
+                        </p>
+                        <p>
+                            Esse questão aqui, ou o cara sabe, ou o cara chuta.
+                            Não tem muito o que fazer. Eu pensei em argumentos
+                            lógicos para justificar o nome <strong>Contagem
+                                Estimativa</strong>, mas isso não importa. Da mesma
+                            forma eu poderia encontrar argumentos para justificar
+                            os nome <strong>Contagem Preliminar</strong> e
+                            <strong>Contagem Indicativa</strong>.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 46 (Específicas)</h3>
+                        <p>
+                            Deixando de lado a questão em sí, vou discorrer um
+                            pouco sobre o que eu entendi sobre esse assunto.
+                        </p>
+                        <p>
+                            Análise de Pontos de Função é um método que utiliza
+                            conceito de Pontos de Função para mensurar tamanho
+                            de Software. A métrica não leva em conta as
+                            tecnologias utilizadas para desenvolver a aplicação,
+                            como linguagem, framework, hardware utilizado e ETC.
+                            O foco da métrica é definir a quantidade de
+                            funcionalidades disponíveis para o usuário.
+                        </p>
+                        <p>
+                            Pelo que eu entendo, você segue uma metodologia
+                            específica de contagem de pontos de função, e
+                            no final da metodologia você tem como resultado uma
+                            métrica única que vai representa o tamanho do Software.
+                            Isso é útil para documentos de licitação.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 46 (Específicas)</h3>
+                        <p>
+                            É fácil você fazer uma licitação para a construção
+                            de um prédio físico. Possuímos diversas métricas como
+                            metros quadrados, quantidade de andares, quantidade
+                            de quartos. Porém, para algo abstrato como um software
+                            é difícil você licitar exatamente a quantidade de
+                            esforço e o tamanho do projeto. Os pontos do função
+                            tentam sanar isso.
+                        </p>
+                        <p>
+                            Cheguei a ver algumas críticas desse métrica, pois,
+                            como citado anteriormente, ela não leva em conta a
+                            tecnologia utilizado. E vamos ser sinceros, a
+                            tecnologia utilizada, considerando vastidão de
+                            linguagens e frameworks que temos atualmente, é
+                            muito importante.
+                        </p>
+                        <p>
+                            Fazer um backend com x pontos de função utilizando
+                            FastAPI não leva o mesmo esforço de fazer o
+                            mesmo backend só que em Java. FastAPI é mais direto,
+                            enquanto o Java é mais verboso. Mesmo utilizando
+                            LLMs, você provavelmente irar demorar mais tempo
+                            para concluir o backend em Java.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 49 (Específicas)</h3>
+                        <p>
+                            Uma equipe de desenvolvimento está adotando o método Kanban e decidiu implementar algumas
+                            cadências recomendadas para melhorar o gerenciamento do fluxo de trabalho.
+                            Nesse contexto, a reunião conhecida como Replenishment Meeting tem como principal
+                            finalidade:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>A)</strong> Realizar o acompanhamento diário das tarefas em andamento,
+                                identificando impedimentos e
+                                ajustando prioridades em tempo real.
+                            </li>
+                            <li class="red">
+                                <strong>B)</strong> Promover uma retrospectiva sobre como o time executou o trabalho
+                                anterior, com foco em
+                                melhorias no processo e lições aprendidas.
+                            </li>
+                            <li>
+                                <strong>C)</strong> Medir continuamente o desempenho do fluxo por meio de métricas como
+                                lead time e
+                                throughput, garantindo previsibilidade de entrega.
+                            </li>
+                            <li class="green">
+                                <strong>D)</strong> Selecionar e priorizar novos itens de trabalho a serem inseridos no
+                                fluxo de execução.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 49 (Específicas)</h3>
+                    </page>
                 </article>
             </div>
             <footer class="status-bar" style="padding: 0;">
                 <p class="status-bar-field">© WhiteFog, 2025</p>
                 <p class="status-bar-field">Create At: 2026-04-02</hp>
-                <p class="status-bar-field">Updated At: 2026-04-02</p>
+                <p class="status-bar-field">Updated At: 2026-04-05</p>
             </footer>
         </div>
 
