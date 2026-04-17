@@ -631,15 +631,444 @@
                         </p>
                     </page>
                     <page>
+                        <h3>Questão 27 (Específicas)</h3>
+                        <p>
+                            Durante a modelagem de um processo de atendimento utilizando BPMN 2.0, um analista precisa
+                            representar uma decisão baseada no resultado de uma verificação automática. Caso a condição
+                            seja
+                            satisfeita, o processo é encerrado; caso contrário, é encaminhado para uma atividade
+                            complementar
+                            de tratamento. Após essa atividade, o fluxo deve permanecer aguardando a ocorrência de um
+                            evento externo, como um e-mail de confirmação, para então prosseguir. Assinale a alternativa
+                            correta que contempla o desvio de fluxo para tratamento condicional e o aguardo da
+                            confirmação,
+                            respectivamente.
+                        </p>
+                        <ul>
+                            <li class="green">
+                                <strong>A)</strong> Gateway Exclusivo (XOR) e Intermediate Catching Event.
+                            </li>
+                            <li class="red">
+                                <strong>B)</strong> Gateway Inclusivo (OR) e Gateway Paralelo (AND).
+                            </li>
+                            <li>
+                                <strong>C)</strong> Gateway de Complexidade e Message End Event.
+                            </li>
+                            <li>
+                                <strong>D)</strong> Gateway Exclusivo (XOR) e Task Event.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 27 (Específicas)</h3>
+                        <p>
+                            Vou começar pela minha interpretação (errada) da questão (eu
+                            nunca tinha visto essa modelo BPMN na vida). Eu tinha entendido
+                            que existiam dois fluxos na questão, sendo eles:
+                        </p>
+                        <ol>
+                            <li>
+                                Caso a condição seja satisfeita, o processo é encerrado; caso contrário, é encaminhado
+                                para uma atividade complementar de tratamento.
+                            </li>
+                            <li>
+                                o fluxo deve permanecer aguardando a ocorrência de um evento externo... para então
+                                prosseguir"
+                            </li>
+                        </ol>
+                    </page>
+                    <page>
+                        <h3>Questão 27 (Específicas)</h3>
+                        <p>
+                            Nas linguagem de programação, quando temos um
+                            <strong>OR</strong> da seguinte forma:
+                        </p>
+                        <pre>
+    condição1 OR condição2
+                        </pre>
+                        <p>
+                            Se a condição1 for satisfeita, a verificação termina
+                            aí. Não há necessidade de verificar a condição2,
+                            pois o condicional OR só precisa de um valor
+                            verdadeiro. Caso contrário ele vai verificar a
+                            condição2. Isso se parece muito com a primeira parte:
+                        </p>
+                        <ul>
+                            <li>
+                                condição satisfeita, processo encerrado; caso contrário, é encaminhado
+                                para uma atividade complementar.
+                            </li>
+                        </ul>
+                        Agora a parte de AND eu realmente não sei dizer qual foi
+                        minha interpretação kkkkkk.
+                    </page>
+                    <page>
+                        <h3>Questão 27 (Específicas)</h3>
+                        <p>
+                            Agora a interpretação correta da questão. Na primeira
+                            alternativa ele utiliza um "ou exclusivo" (XOR), esse
+                            operador obriga você a escolher um dos fluxos, se você
+                            não escolher nenhum, ou mais de um, o resultado dele é
+                            falso. É igual quando você vai no RU da faculdade e tem
+                            que escolher <strong>apenas uma opção de
+                                "carne"</strong>, só com a diferença que no RU você pode
+                            escolher nenhuma opção, mas no XOR não.
+                        </p>
+                        <p>
+                            Já no segundo fluxo ele fala sobre esperar um fluxo
+                            externo. Aqui o cara realmente tinha que ter
+                            conhecimento do padrão BPMN, senão ele ia ficar em
+                            dúvida entre <strong>Task Event</strong> ou
+                            <strong>Intermediate Catching Event</strong>. No caso,
+                            não existe Task Event no BPMN. Existe Tasks e existem
+                            Events, mas não existe Task Event.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 27 (Específicas)</h3>
+                        <p>
+                            Ainda tem uma explicação do porquê
+                            <strong>Intermediate Catching Event</strong>.:
+                        </p>
+                        <ul>
+                            <li><strong>Intermediate</strong>: acontece no meio do fluxo (Intermediate =</li>
+                            Intermediário).
+                            <li><strong>Catching</strong>: ele está esperando um evento (Catching = Captura).</li>
+                            <li><strong>Event</strong>: é um evento.</li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 30 (Específicas)</h3>
+                        <p>
+                            Em uma aplicação que utiliza JPA 2.1 (ou superior), ao listar entidades Pedido, ocorre o
+                            problema
+                            do N+1 selects ao acessar a associação pedido.cliente mapeada como @ManyToOne(fetch =
+                            FetchType.LAZY). Para garantir que Cliente seja carregado na mesma consulta que busca
+                            Pedido,
+                            eliminando o N+1, o desenvolvedor deve:
+                        </p>
+                        <ul>
+                            <li class="green">
+                                <strong>A)</strong> Utilizar JOIN FETCH na consulta JPQL.
+                            </li>
+                            <li class="red">
+                                <strong>B)</strong> Alterar o relacionamento para FetchType.EAGER.
+                            </li>
+                            <li>
+                                <strong>C)</strong> Utilizar uma consulta JPQL com JOIN para filtrar ou restringir os
+                                resultados.
+                            </li>
+                            <li>
+                                <strong>D)</strong> Utilizar limitação de intervalo (setFirstResult / setMaxResults) na
+                                consulta JPQL.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 30 (Específicas)</h3>
+                        <p>
+                            Na faculdade eu fiz uma disciplina chamada
+                            <strong>Programação Para Persistência</strong>. Lá
+                            o professor ensinou a utilizar o FastAPI com
+                            SQLModel. Ele também chegou a explicar o problema
+                            das N+1 requisições
+                        </p>
+                        <p>
+                            Esse problema acontece assim: considere uma tabela A
+                            que é relacionada com uma tabela B e você pega N
+                            elementos da tabela A. Geralmente o ORM faz um Lazy
+                            Loading. Isso é, ele faz um "carregamento
+                            preguiçoso", e só vai fazer o JOIN da tabela A com a
+                            tabela B se você tentar acessar esse campo. Então
+                            se você acessar esse campo nos N elementos que você
+                            pegou da tabela A, o banco vai receber 1 requisição
+                            (a primeira que você fez e retornou os N elementos)
+                            + N requisições (A união do elemento A[i] com seu
+                            elemento B[j] relacionado), o que vai totalizar N +
+                            1 requisições para o banco.
+                        </p>
+                        <p>
+                            Isso acaba acanalhando toda a performance do teu
+                            sistema
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 30 (Específicas)</h3>
+                        <p>
+                            Pare resolver isso, o professor tinha explicando
+                            como utilizar o método Eager (Ansioso). Nesse caso
+                            o banco já faz os N relacionamentos em uma requisição
+                            só (nada de preguiça).
+                        </p>
+                        <p>
+                            Por causa desse background eu acabei marcando a
+                            alternativa <strong>"Alterar o relacionamento para
+                                FetchType.EAGER."</strong>. Mas, aparentemente,
+                            mudar a relacionamento para Eager no JPA é
+                            considerado uma má prática. Isso porque você vai
+                            perder as vantagens do Lazy Loading. Sempre vai
+                            está fazendo o JOIN da tabela A com a tabela B, o
+                            que vai diminuir a performance do sistema em outras
+                            requisições.
+                        </p>
+                        <p>
+                            O correto é fazer o <strong>JOIN FETCH
+                                pedido.cliente</strong>, que exclusivamente nesse
+                            caso, vai informar para o JPA retornar todos os
+                            relacionamentos de pedido com cliente utilizando um
+                            só requisição para o banco.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 31 (Específicas)</h3>
+                        <p>
+                            Um arquiteto de software está modernizando a documentação de uma aplicação construída com
+                            Spring Boot 3. Ele optou por utilizar a biblioteca springdoc-openapi para expor a interface
+                            do
+                            Swagger conforme os padrões da especificação OpenAPI 3.x. Ao implementar o controlador
+                            responsável pela gestão de inventário, ele precisa anotar um método que recupera um item
+                            específico pelo seu código identificador (ex: GET /produtos/{codigo}). Considerando as boas
+                            práticas e a compatibilidade com a especificação OpenAPI 3.x, assinale a alternativa que
+                            apresenta
+                            as anotações específicas de documentação do pacote io.swagger.v3.oas.annotations para
+                            descrever,
+                            respectivamente, a finalidade do endpoint e o detalhamento do parâmetro recebido na URL.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>A)</strong> @Api para a definição do recurso e @ImplicitParam para documentar o
+                                código identificador na
+                                rota.
+                            </li>
+                            <li class="red">
+                                <strong>B)</strong> @ApiOperation para descrever a ação do método e @ApiParam para
+                                detalhar as restrições do
+                                código do produto.
+                            </li>
+                            <li class="green">
+                                <strong>C)</strong> @Operation para descrever o objetivo do endpoint e @Parameter para
+                                fornecer informações
+                                detalhadas sobre o identificador do produto.
+                            </li>
+                            <li>
+                                <strong>D)</strong> @GetMapping para o mapeamento da rota, sendo desnecessário qualquer
+                                outro recurso.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 31 (Específicas)</h3>
+                        <p>
+                            Eu não marquei letra C porque eu pensei que eram
+                            anotações muito simples. Muito fácil o Java que tem
+                            uma LIB nativa gigantesca já ter alguma coisa com a
+                            anotação <strong>@Operation</strong> ou
+                            <strong>@Parameter</strong>. Porem, acabei errando.
+                        </p>
+                        <p>
+                            Uma interpretação que você podia ter tido era, no
+                            final do enunciado ele fala: "anotações específicas
+                            de documentação do pacote
+                            io.swagger.v3.oas.annotations para descrever,
+                            respectivamente, a <strong>finalidade do endpoint</strong> e o
+                            <strong>detalhamento do parâmetro</strong> recebido na URL".
+                        </p>
+                        <p>
+                            Dá para fazer a seguinte ligação lógica:
+                        </p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        enunciado
+                                    </th>
+                                    <th>
+
+                                    </th>
+                                    <th>
+                                        questão correta
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        finalidade do endpoint
+                                    </td>
+                                    <td>
+                                        ~=
+                                    </td>
+                                    <td>
+                                        descrever o objetivo do endpoint
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        detalhamento do parâmetro
+                                    </td>
+                                    <td>
+                                        ~=
+                                    </td>
+                                    <td>
+                                        informações detalhadas sobre o identificador do produto.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </page>
+                    <page>
+                        <h3>Questão 33 (Específicas)</h3>
+                        <p>
+                            Em aplicações desenvolvidas com React, é comum que componentes realizem renderizações
+                            frequentes. Em cenários nos quais funções são repassadas como propriedades para componentes
+                            filhos, a recriação dessas funções a cada renderização pode causar impactos negativos de
+                            desempenho. Nesse contexto, o React 16.8 ou superior disponibiliza Hooks nativos para
+                            otimização do ciclo de renderização. Considerando um caso em que se deseja memorizar a
+                            definição de uma função entre renderizações, evitando sua recriação desnecessária, assinale
+                            a
+                            alternativa correta.
+                        </p>
+                        <ul>
+                            <li class="red">
+                                <strong>A)</strong> useState.
+                            </li>
+                            <li>
+                                <strong>B)</strong> useEffect.
+                            </li>
+                            <li>
+                                <strong>C)</strong> useMemo.
+                            </li>
+                            <li class="green">
+                                <strong>D)</strong> useCallback.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 33 (Específicas)</h3>
+                        <p>
+                            Esse é o tipo de questão onde, se nunca tivesse
+                            escutado nada sobre React na minha vida, talvez eu
+                            tivesse acertado ela. Sempre escutei meus amigos do
+                            front falarem sobre <strong>useState</strong> e
+                            <strong>useEffect</strong>. Literalmente qualquer
+                            problema no front eles diziam: "faz um useEffect",
+                            "é so criar um useState para isso". Então eu nem
+                            imaginei que as opções useMemo ou useCallback fossem
+                            certas.
+                        </p>
+                        <p>
+                            Quando eu digo que, se eu nunca tivesse ouvido falar
+                            sobre React, talvez eu tivesse acertado essa
+                            questão, eu quero dizer pelo fato da seguinte parte
+                            do enunciado: "Em cenários nos quais <strong>funções
+                                são repassadas como propriedades </strong> para
+                            componentes filhos". Em programação, quando você
+                            fala de <strong>passar uma função como propriedade
+                                de algo</strong>, a maioria das vezes a gente está
+                            falando sobre callback. Então era fácil saber qual
+                            alternativa era correta.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 36 (Específicas)</h3>
+                        <p>
+                            Uma autarquia pública pretende integrar diversos sistemas legados desenvolvidos em
+                            diferentes
+                            linguagens de programação e plataformas. Para viabilizar essa integração, a equipe
+                            técnica
+                            decidiu
+                            implementar um componente que atue como uma camada intermediária que seja responsável
+                            por
+                            intermediar, rotear, transformar e orquestrar mensagens entre diferentes serviços e
+                            aplicações,
+                            promovendo baixo acoplamento, interoperabilidade e independência de plataforma.
+                            Nesse contexto, o componente de arquitetura SOA mais adequado é o:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>A)</strong> Registro de Serviços (Service Registry).
+                            </li>
+                            <li class="red">
+                                <strong>B)</strong> Mecanismo de Notificação por Eventos (Event-driven).
+                            </li>
+                            <li class="green">
+                                <strong>C)</strong> Barramento de Serviço Corporativo (Enterprise Service Bus).
+                            </li>
+                            <li>
+                                <strong>D)</strong> Arquitetura Baseada em Microsserviços
+                                Independentes(Microservices).
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 36 (Específicas)</h3>
+                        <p>
+                            Quando eu lí essa parte: "orquestrar mensagens entre
+                            diferentes serviços e aplicações, promovendo baixo
+                            acoplamento", eu já pensei em algo orientado a
+                            eventos, tipo um RabbitMQ. A ideia principal de
+                            padrões de eventos, como por exemplo o padrão
+                            Observer é justamente promover baixo acoplamento.
+                            Porém, eu não prestei atenção na parte que ele fala
+                            <strong>"transformar mensagens"</strong>. Serviços
+                            orientados a eventos não fazem transformações nas
+                            mensagens, então só por isso já estaria errado.
+                        </p>
+                        <p>
+                            Primeiramente, que porra é um SOA? Essa sigla
+                            significa Service-Oriente Architecture. É o padrão
+                            de serviços focados em serviços discretos
+                            (claramente separados) em vez de grandes blocos
+                            monolíticos. Por exemplo, em um sistema de
+                            supermercado, podia existir o serviço de estoque e
+                            o serviço financeiro. Quem se comunica com eles não
+                            precisa saber exatamente como eles funcionam. Basta
+                            saber como se comunicar com o serviço que o resto
+                            é transparente.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 36 (Específicas)</h3>
+                        <p>
+                            Esses serviços, podem tranquilamente ser feitos em
+                            linguagens e frameworks diferentes. Por exemplo,
+                            o sistema monetário ser feito em Java e o
+                            de estoque em Python. A comunicação entres os
+                            servições é feito por uma linguagem intermediário
+                            como XML (SOAP) ou JSON (REST).
+                        </p>
+                        <p>
+                            Alguns benefícios dessa arquitetura são:
+                        </p>
+                        <ul>
+                            <li>Reutilização de serviços</li>
+                            <li>Baixo acoplamento</li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 36 (Específicas)</h3>
+                        <p>
+                            Para esses diversos sistemas se comunicarem é utilizado
+                            um ESB (Enterprise Service Bus) é um orquestrador
+                            que ajuda na comunicação entre os serviços. Em vez
+                            dos serviços se comunicarem diretamente entre si,
+                            eles se comunicam com o ESB e esse orquestra tudo
+                            corretamente. O enunciado da questão descreve bem
+                            as obrigações de um ESB.
+                        </p>
+                    </page>
+                    <page>
                         <h3>Questão 39 (Específicas)</h3>
                         <p>
                             Um analista precisa listar o nome de todos os clientes, independentemente de possuírem
                             pedidos
-                            associados, e os identificadores dos pedidos cujo status seja 'APROVADO'. Para clientes que
+                            associados, e os identificadores dos pedidos cujo status seja 'APROVADO'. Para clientes
+                            que
                             não
                             possuam pedidos com esse status, o identificador do pedido deve ser exibido como NULL.
                             Considere que as tabelas apresentadas estão corretamente modeladas em um banco de dados
-                            relacional PostgreSQL, com integridade referencial garantida por meio de chaves primárias e
+                            relacional PostgreSQL, com integridade referencial garantida por meio de chaves
+                            primárias e
                             estrangeiras, sendo pedidos.cliente_id uma chave estrangeira que referencia clientes.id.
                         </p>
 
@@ -717,19 +1146,23 @@
                         </p>
                         <ul>
                             <li class="red">
-                                <strong>A)</strong> SELECT c.nome, p.id FROM clientes c LEFT JOIN pedidos p ON c.id =
+                                <strong>A)</strong> SELECT c.nome, p.id FROM clientes c LEFT JOIN pedidos p ON c.id
+                                =
                                 p.cliente_id WHERE p.status = 'APROVADO' OR p.id IS NULL;
                             </li>
                             <li class="green">
-                                <strong>B)</strong> SELECT c.nome, p.id FROM clientes c LEFT JOIN pedidos p ON c.id =
+                                <strong>B)</strong> SELECT c.nome, p.id FROM clientes c LEFT JOIN pedidos p ON c.id
+                                =
                                 p.cliente_id AND p.status = 'APROVADO';
                             </li>
                             <li>
-                                <strong>C)</strong> SELECT c.nome, p.id FROM clientes c INNER JOIN pedidos p ON c.id =
+                                <strong>C)</strong> SELECT c.nome, p.id FROM clientes c INNER JOIN pedidos p ON c.id
+                                =
                                 p.cliente_id WHERE p.status = 'APROVADO';
                             </li>
                             <li>
-                                <strong>D)</strong> SELECT c.nome, p.id FROM clientes c LEFT JOIN pedidos p ON c.id =
+                                <strong>D)</strong> SELECT c.nome, p.id FROM clientes c LEFT JOIN pedidos p ON c.id
+                                =
                                 p.cliente_id HAVING p.status = 'APROVADO';
                             </li>
                         </ul>
@@ -760,14 +1193,86 @@
                         </p>
                     </page>
                     <page>
+                        <h3>Questão 40 (Específicas)</h3>
+                        <p>
+                            Durante a evolução de um sistema corporativo orientado a objetos, a equipe de
+                            desenvolvimento
+                            identificou dificuldades na substituição de componentes e na realização de testes
+                            unitários,
+                            devido
+                            ao forte acoplamento entre classes centrais e implementações específicas. Para mitigar
+                            esse
+                            problema, decidiu-se adotar práticas alinhadas aos princípios SOLID.
+                            Nesse contexto, uma abordagem coerente com o Princípio da Inversão de Dependência
+                            (Dependency Inversion Principle - DIP) é:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>A)</strong> Projetar o sistema de forma que as classes de mais alto nível
+                                conheçam diretamente as
+                                implementações concretas das classes de nível inferior.
+                            </li>
+                            <li>
+                                <strong>B)</strong> Criar dependências diretas entre classes especializadas e suas
+                                generalizações, garantindo que a
+                                hierarquia de herança substitua a necessidade de inversão.
+                            </li>
+                            <li class="green">
+                                <strong>C)</strong> Definir abstrações estáveis, de modo que tanto os módulos de
+                                alto
+                                nível quanto os de baixo nível
+                                dependam dessas abstrações, e não de implementações concretas.
+                            </li>
+                            <li class="red">
+                                <strong>D)</strong> As classes de baixo nível devem exclusivamente fornecer as
+                                interfaces que as classes de alto
+                                nível são obrigadas a implementar, invertendo o fluxo de controle tradicional.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 40 (Específicas)</h3>
+                        <p>
+                            A alternativa <strong>A</strong> descreve o
+                            contrário do DIP. Ela basicamente fala para as
+                            classes de alto ter conhecimento da implementação
+                            das de baixo nível. Já a letra <strong>B</strong> é
+                            completamente insana, ao dizer <strong>"Criar
+                                dependências diretas entre classe"</strong>.
+                        </p>
+                        <p>
+                            Na época que fiz essa prova, eu tinha noção que o
+                            DIP era sobre interfaces e comunicação entre classes
+                            de baixo e alto nível. Porém o que me pegou e fez eu
+                            selecionar essa alternativa D foi a parte que ele
+                            diz <strong>"invertendo o fluxo de controle
+                                tradicional"</strong>. Quando ele disse "invertendo
+                            o fluxo", eu já pensei, eita, falou sobre interfaces
+                            e falou sobre inversão, só pode ser essa.
+                        </p>
+                        <p>
+                            A alternativa D está errado porque ele fala sobre
+                            as classes de baixo nível fornecerem as interfaces
+                            que as classes de alto nível devem implementar. Porém,
+                            no DIP, é totalmente o contrário. As classes de alto
+                            nível é que delegam as interfaces que as de baixo
+                            nível devem implementar.
+                        </p>
+                    </page>
+                    <page>
                         <h3>Questão 46 (Específicas)</h3>
                         <p>
-                            No processo de medição do tamanho funcional de sistemas de software, a Análise por Pontos de
-                            Função (APF), conforme o padrão do IFPUG (International Function Point Users Group), prevê
-                            diferentes tipos de contagem, variando conforme o nível de informação disponível sobre os
-                            requisitos e as funcionalidades. Em determinadas situações iniciais do projeto, utiliza-se
+                            No processo de medição do tamanho funcional de sistemas de software, a Análise por
+                            Pontos de
+                            Função (APF), conforme o padrão do IFPUG (International Function Point Users Group),
+                            prevê
+                            diferentes tipos de contagem, variando conforme o nível de informação disponível sobre
+                            os
+                            requisitos e as funcionalidades. Em determinadas situações iniciais do projeto,
+                            utiliza-se
                             um tipo
-                            de contagem em que todas as funções recebem uma complexidade funcional previamente definida,
+                            de contagem em que todas as funções recebem uma complexidade funcional previamente
+                            definida,
                             sem detalhamento completo de seus elementos.
                         </p>
                         <p>
@@ -866,7 +1371,8 @@
                     <page>
                         <h3>Questão 49 (Específicas)</h3>
                         <p>
-                            Uma equipe de desenvolvimento está adotando o método Kanban e decidiu implementar algumas
+                            Uma equipe de desenvolvimento está adotando o método Kanban e decidiu implementar
+                            algumas
                             cadências recomendadas para melhorar o gerenciamento do fluxo de trabalho.
                             Nesse contexto, a reunião conhecida como Replenishment Meeting tem como principal
                             finalidade:
@@ -883,25 +1389,156 @@
                                 melhorias no processo e lições aprendidas.
                             </li>
                             <li>
-                                <strong>C)</strong> Medir continuamente o desempenho do fluxo por meio de métricas como
+                                <strong>C)</strong> Medir continuamente o desempenho do fluxo por meio de métricas
+                                como
                                 lead time e
                                 throughput, garantindo previsibilidade de entrega.
                             </li>
                             <li class="green">
-                                <strong>D)</strong> Selecionar e priorizar novos itens de trabalho a serem inseridos no
+                                <strong>D)</strong> Selecionar e priorizar novos itens de trabalho a serem inseridos
+                                no
                                 fluxo de execução.
                             </li>
                         </ul>
                     </page>
                     <page>
                         <h3>Questão 49 (Específicas)</h3>
+                        <p>
+                            A alternativa A claramente fala sobre a reunião de daily
+                            na metodologia Scrum. Já alternativa B encaixa muito bem
+                            na descrição sprint retrospective. A letra C, sequer
+                            parece algum tipo de reunião. Parece mais uma
+                            característica de alguma metodologia. Então, só sobra a
+                            letra D, que é a certa
+                        </p>
+                        <p>
+                            Na época que eu fiz essa questão, eu não sabia o que
+                            significava a palavra em inglês replenishment.
+                            O significado dessa palavra é reabastecer. A
+                            alternativa D claramente fala sobre atividades de
+                            <strong>reabastecimento</strong> das tarefas, o que
+                            encaixa bem com o significado de <strong>replenishment</strong>..
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 49 (Específicas)</h3>
+                        <p>
+                            Uma equipe de desenvolvimento está adotando o método Kanban e decidiu implementar
+                            algumas
+                            cadências recomendadas para melhorar o gerenciamento do fluxo de trabalho.
+                            Nesse contexto, a reunião conhecida como Replenishment Meeting tem como principal
+                            finalidade:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>A)</strong> Realizar o acompanhamento diário das tarefas em andamento,
+                                identificando impedimentos e
+                                ajustando prioridades em tempo real.
+                            </li>
+                            <li class="red">
+                                <strong>B)</strong> Promover uma retrospectiva sobre como o time executou o trabalho
+                                anterior, com foco em
+                                melhorias no processo e lições aprendidas.
+                            </li>
+                            <li>
+                                <strong>C)</strong> Medir continuamente o desempenho do fluxo por meio de métricas
+                                como
+                                lead time e
+                                throughput, garantindo previsibilidade de entrega.
+                            </li>
+                            <li class="green">
+                                <strong>D)</strong> Selecionar e priorizar novos itens de trabalho a serem inseridos
+                                no
+                                fluxo de execução.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 50 (Específicas)</h3>
+                        <p>
+                            No contexto da engenharia de requisitos, a técnica de casos de uso é amplamente
+                            empregada
+                            para
+                            representar interações entre usuários e sistemas, servindo como base para especificação
+                            e
+                            rastreabilidade funcional.
+                            Assinale a alternativa que apresenta uma prática que compromete principalmente a
+                            rastreabilidade
+                            dos requisitos ao se utilizar casos de uso.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>A)</strong> Utilizar notação padronizada e compreensível pelos usuários
+                                finais,
+                                facilitando a validação
+                                colaborativa dos requisitos.
+                            </li>
+                            <li class="green">
+                                <strong>B)</strong> Atualizar os casos de uso apenas ao final do projeto, evitando
+                                revisões durante as iterações para
+                                reduzir retrabalho documental.
+                            </li>
+                            <li class="red">
+                                <strong>C)</strong> Não descrever fluxos alternativos e condições de exceção nos
+                                casos
+                                de uso, limitando a
+                                documentação ao cenário principal.
+                            </li>
+                            <li>
+                                <strong>D)</strong> Elaborar casos de uso priorizando apenas a visão dos
+                                stakeholders
+                                principais, sem envolver
+                                usuários operacionais no levantamento inicial.
+                            </li>
+                        </ul>
+                    </page>
+                    <page>
+                        <h3>Questão 50 (Específicas)</h3>
+                        <p>
+                            Na época que eu fiz essa questão, eu simplesmente
+                            não sabia o que significava rastreabilidade. Eu
+                            sabia que a palavra tinha a ver com você rastrear
+                            alguma coisa, mas eu não sabia o que.
+                        </p>
+                        <p>
+                            Rastreabilidade em engenharia de software fala
+                            sobre a capacidade de acompanhar um requisito
+                            desde sua criação, implementação até a entrega.
+                            Ou seja, é dizer porque aquilo foi implementado
+                            da quela forma.
+                        </p>
+                        <p>
+                            Eu marquei a letra C no chute mesmo. Porem a correta
+                            era a letra B. Se for deixado para atualizar os
+                            casos de uso apenas no final do projeto, o link
+                            entre requisito e código implementado e entregado é
+                            quebrado. Ou seja, um requisito pode ter sido
+                            mudado, mas como no caso de uso ele só vai ser
+                            alterado no final do projeto, não tem como você
+                            rastrear o requisito correto da aplicação.
+                        </p>
+                    </page>
+                    <page>
+                        <h3>Questão 50 (Específicas)</h3>
+                    </page>
+                    <page>
+                        <h3>Questão 50 (Específicas)</h3>
+                    </page>
+                    <page>
+                        <h3>Questão 50 (Específicas)</h3>
+                    </page>
+                    <page>
+                        <h3>Questão 50 (Específicas)</h3>
+                    </page>
+                    <page>
+                        <h3>Questão 50 (Específicas)</h3>
                     </page>
                 </article>
             </div>
             <footer class="status-bar" style="padding: 0;">
                 <p class="status-bar-field">© WhiteFog, 2025</p>
                 <p class="status-bar-field">Create At: 2026-04-02</hp>
-                <p class="status-bar-field">Updated At: 2026-04-05</p>
+                <p class="status-bar-field">Updated At: 2026-04-17</p>
             </footer>
         </div>
 
